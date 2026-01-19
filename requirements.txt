@@ -1,0 +1,12 @@
+# GitHub Repository Description Updater - Requirements
+# Python 3.8+
+
+# GitHub API
+PyGithub>=2.1.1
+
+# HTTP requests
+requests>=2.31.0
+
+# Optional: Enhanced CLI experience
+colorama>=0.4.6
+rich>=13.7.0

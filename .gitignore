@@ -1,0 +1,266 @@
+# GitHub Repository Description Updater - .gitignore
+
+# ============================================================================
+# Python
+# ============================================================================
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / Packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# ============================================================================
+# Project-Specific Files
+# ============================================================================
+
+# Log Files
+*.log
+repo_description_update.log
+
+# JSON Exports (timestamped analysis files)
+my_github_catalog_*.json
+analysis_*.json
+backup_*.json
+state_after_update_*.json
+
+# Temporary Files
+temp_*/
+tmp/
+*.tmp
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# ============================================================================
+# IDE / Editor Files
+# ============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw?
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# JetBrains
+*.iml
+.idea/
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# ============================================================================
+# Operating System Files
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Windows Zone.Identifier (security markers from downloads)
+*:Zone.Identifier
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# Environment & Configuration
+# ============================================================================
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# GitHub Token (extra safety)
+.github_token
+github_token.txt
+token.txt
+
+# Configuration overrides
+config.local.*
+*.local
+
+# ============================================================================
+# Documentation Build Files
+# ============================================================================
+
+# Sphinx documentation
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# MkDocs
+site/
+
+# ============================================================================
+# Version Control
+# ============================================================================
+
+# Git
+.git/
+*.orig
+
+# ============================================================================
+# Misc
+# ============================================================================
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ============================================================================
+# Project Archives
+# ============================================================================
+
+# Compressed files
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ============================================================================
+# Keep These Files (Exceptions)
+# ============================================================================
+
+# Don't ignore these important files
+!.gitignore
+!requirements.txt
+!README.md
+!LICENSE
