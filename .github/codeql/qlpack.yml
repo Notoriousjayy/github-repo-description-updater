@@ -1,0 +1,4 @@
+name: Notoriousjayy/github-repo-description-updater-codeql-pack
+version: 0.0.1
+library: true
+dependencies: {}
