@@ -1,0 +1,195 @@
+{
+  "generated_at": "2026-01-19T02:12:53.988395",
+  "total_proposals": 21,
+  "proposals": [
+    {
+      "current_name": "Building-Microservices",
+      "new_name": "microservices-architecture-guide",
+      "reason": "More descriptive and SEO-friendly",
+      "priority": "high",
+      "category": "Documentation",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "Understanding-ETL",
+      "new_name": "etl-patterns-and-practices",
+      "reason": "Clearer purpose and searchable",
+      "priority": "high",
+      "category": "Documentation",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "CIFlowDocs",
+      "new_name": "cicd-pipeline-documentation",
+      "reason": "Expanded acronym for clarity",
+      "priority": "high",
+      "category": "Documentation",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "CISSP",
+      "new_name": "cissp-study-guide",
+      "reason": "Clear purpose for certification prep",
+      "priority": "high",
+      "category": "Education",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "dev-guidelines",
+      "new_name": "software-development-guidelines",
+      "reason": "More descriptive and professional",
+      "priority": "medium",
+      "category": "Documentation",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "Mathematical-Utility-API",
+      "new_name": "math-utilities-api",
+      "reason": "Shorter, cleaner, more standard",
+      "priority": "medium",
+      "category": "API",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "Pong",
+      "new_name": "pong-game-python",
+      "reason": "Adds language context for clarity",
+      "priority": "low",
+      "category": "Games",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "TechTeensPong",
+      "new_name": "tech-teens-pong-tutorial",
+      "reason": "Clarifies educational purpose",
+      "priority": "medium",
+      "category": "Education",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "Binaryville",
+      "new_name": "binaryville-learning-game",
+      "reason": "Adds context about learning focus",
+      "priority": "low",
+      "category": "Education",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "WASM",
+      "new_name": "webassembly-examples",
+      "reason": "Expanded acronym and added context",
+      "priority": "high",
+      "category": "Graphics",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "webgl2-wasm-pong",
+      "new_name": "webgl2-wasm-pong-game",
+      "reason": "Minor clarity improvement",
+      "priority": "low",
+      "category": "Graphics",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "Minimal-ModernOpenGL",
+      "new_name": "modern-opengl-examples",
+      "reason": "Cleaner, more standard naming",
+      "priority": "medium",
+      "category": "Graphics",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "C_Base_GSL_OpenGL_project",
+      "new_name": "c-gsl-opengl-graphics",
+      "reason": "Cleaner naming, removed underscores",
+      "priority": "high",
+      "category": "Graphics",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "Nginx-web-proxy",
+      "new_name": "nginx-reverse-proxy-config",
+      "reason": "More specific and descriptive",
+      "priority": "low",
+      "category": "Infrastructure",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "nginx-web-proxy-ui",
+      "new_name": "nginx-proxy-management-ui",
+      "reason": "Clearer purpose",
+      "priority": "low",
+      "category": "Infrastructure",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "TerraDNS-Stack",
+      "new_name": "terraform-dns-infrastructure",
+      "reason": "Expanded and clarified",
+      "priority": "low",
+      "category": "Infrastructure",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "ComplyMatrix-Security-Standards",
+      "new_name": "compliance-matrix-security",
+      "reason": "Shorter and cleaner",
+      "priority": "low",
+      "category": "Security",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "ReactStreamline",
+      "new_name": "react-starter-template",
+      "reason": "Standard naming convention",
+      "priority": "medium",
+      "category": "Templates",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "SpringStreamline",
+      "new_name": "spring-boot-starter-template",
+      "reason": "Standard naming convention",
+      "priority": "medium",
+      "category": "Templates",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "Matrix-Element-Randomizer",
+      "new_name": "matrix-randomizer-utility",
+      "reason": "Shorter while maintaining clarity",
+      "priority": "low",
+      "category": "Utilities",
+      "confidence": 0.95,
+      "is_valid": true
+    },
+    {
+      "current_name": "notification-batch-processor",
+      "new_name": "notification-batch-service",
+      "reason": "More standard service naming",
+      "priority": "low",
+      "category": "Services",
+      "confidence": 0.95,
+      "is_valid": true
+    }
+  ]
+}
