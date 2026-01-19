@@ -1,7 +1,8 @@
 #!/bin/bash
 # Cleanup Script for AnalyzingGithub Project
 # ==========================================
-# This script removes Windows Zone.Identifier files and organizes the project
+# This script removes Windows Zone.Identifier files, cleans Python cache, and
+# organizes common generated artifacts into exports/, logs/, and backups/.
 
 echo "GitHub Repo Description Updater - Cleanup Script"
 echo "================================================="
@@ -30,13 +31,13 @@ echo ""
 
 # Step 1: Remove Zone.Identifier files
 echo "Step 1: Removing Windows Zone.Identifier files..."
-zone_files=$(find . -name "*:Zone.Identifier" -type f 2>/dev/null)
-zone_count=$(echo "$zone_files" | grep -c "Zone.Identifier" 2>/dev/null || echo "0")
+mapfile -t zone_files < <(find . -name "*:Zone.Identifier" -type f 2>/dev/null)
+zone_count=${#zone_files[@]}
 
 if [ "$zone_count" -gt 0 ]; then
-    echo "$zone_files" | while read -r file; do
+    for file in "${zone_files[@]}"; do
         if [ -f "$file" ]; then
-            rm -f "$file"
+            rm -f -- "$file"
             print_success "Removed: $(basename "$file")"
         fi
     done
@@ -48,10 +49,12 @@ echo ""
 
 # Step 2: Remove Python cache
 echo "Step 2: Cleaning Python cache..."
-if find . -type d -name "__pycache__" -o -name "*.pyc" -o -name "*.pyo" | grep -q .; then
-    find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null
-    find . -type f -name "*.pyc" -delete 2>/dev/null
-    find . -type f -name "*.pyo" -delete 2>/dev/null
+cache_dirs_count=$(find . -type d -name "__pycache__" -print 2>/dev/null | wc -l | tr -d ' ')
+cache_files_count=$(find . -type f \( -name "*.pyc" -o -name "*.pyo" \) -print 2>/dev/null | wc -l | tr -d ' ')
+
+if [ "$cache_dirs_count" -gt 0 ] || [ "$cache_files_count" -gt 0 ]; then
+    find . -type d -name "__pycache__" -prune -exec rm -rf {} + 2>/dev/null
+    find . -type f \( -name "*.pyc" -o -name "*.pyo" \) -delete 2>/dev/null
     print_success "Python cache cleaned"
 else
     print_info "No Python cache files found"
@@ -74,22 +77,34 @@ echo "Step 4: Organizing files..."
 
 # Move JSON exports
 json_count=0
-for file in my_github_catalog_*.json analysis_*.json backup_*.json 2>/dev/null; do
+shopt -s nullglob
+json_files=(my_github_catalog_*.json analysis_*.json backup_*.json)
+for file in "${json_files[@]}"; do
     if [ -f "$file" ]; then
-        mv "$file" exports/ 2>/dev/null && ((json_count++))
+        mv -f -- "$file" exports/ 2>/dev/null && ((json_count++))
     fi
 done
+shopt -u nullglob
 
-if [ $json_count -gt 0 ]; then
+if [ "$json_count" -gt 0 ]; then
     print_success "Moved $json_count JSON export(s) to exports/"
 else
     print_info "No JSON exports to move"
 fi
 
-# Move log files
-if [ -f "repo_description_update.log" ]; then
-    mv repo_description_update.log logs/ 2>/dev/null
-    print_success "Moved log file to logs/"
+# Move log files (any *.log in the project root)
+log_count=0
+shopt -s nullglob
+log_files=( *.log )
+for file in "${log_files[@]}"; do
+    if [ -f "$file" ]; then
+        mv -f -- "$file" logs/ 2>/dev/null && ((log_count++))
+    fi
+done
+shopt -u nullglob
+
+if [ "$log_count" -gt 0 ]; then
+    print_success "Moved $log_count log file(s) to logs/"
 else
     print_info "No log files to move"
 fi
